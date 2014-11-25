@@ -915,8 +915,11 @@ header.jumbotron{
 
 .modal-body h1{
     color:#DB2020;
-    margin:200px 0 24px;
     font-size:32px;
+}
+
+.modal-body h1.with-margin {
+    margin:200px 0 24px;
 }
 
 .modal-body .project-descr{

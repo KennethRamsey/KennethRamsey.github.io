@@ -113,7 +113,9 @@ $(document).ready(function() {
 
 	/*============================================
 	Project Preview
-	==============================================*/
+	==============================================*/ 
+
+    // create click handlers for modal buttons
 	$('.project-item').click(function(e){
 		e.preventDefault();
 
@@ -122,7 +124,6 @@ $(document).ready(function() {
 			link = elem.attr('href'),
 			descr = elem.find('.project-description').html(),
 			slidesHtml = '<ul class="slides">',
-
 			slides = elem.data('images').split(',');
 
 		for (var i = 0; i < slides.length; ++i) {
@@ -136,31 +137,59 @@ $(document).ready(function() {
 			$(this).find('h1').text(title);
 			$(this).find('.btn').attr('href',link);
 			$(this).find('.project-descr').html(descr);
-			$(this).find('.image-wrapper').addClass('flexslider').html(slidesHtml);
-			
-			setTimeout(function(){
-				$('.image-wrapper.flexslider').flexslider({
-					slideshowSpeed: 3000,
-					animation: 'slide',
-					controlNav: false,
-					start: function(){
-						$('#project-modal .image-wrapper')
-						.addClass('done')
-						.prev('.loader').fadeOut();
-					}
-				});
-			},1000);
+            
+		    // Needs to only hadd the flex box if there is a .image-wrapper div.
+			var imageWrapper = $(this).find('.image-wrapper');
+
+			if (imageWrapper[0]) {
+
+			    // should add margin for wrapper and image if it is there, TO H1 in modal
+			    $(this).find('h1').addClass("with-margin");
+
+			    $(this).find('.image-wrapper').addClass('flexslider').html(slidesHtml);
+
+			    setTimeout(function () {
+			        $('.image-wrapper.flexslider').flexslider({
+			            slideshowSpeed: 3000,
+			            animation: 'slide',
+			            controlNav: false,
+			            start: function () {
+			                $('#project-modal .image-wrapper')
+                            .addClass('done')
+                            .prev('.loader').fadeOut();
+			            }
+			        });
+			    }, 1000);
+			}
+
 		}).modal();
 		
 	});
 
+
 	$('#project-modal').on('hidden.bs.modal', function () {
-		$(this).find('.loader').show();
-		$(this).find('.image-wrapper')
-			.removeClass('flexslider')
-			.removeClass('done')
-			.html('')
-			.flexslider('destroy');
+
+	    // check that there is a .loader
+	    var loader = $(this).find('.loader');
+
+	    if (loader[0]) {
+	        loader.show();
+	    }
+
+	    // check that there is .image-wrapper
+	    var imageWrapper = $(this).find('.image-wrapper');
+
+	    if (imageWrapper[0]) {
+
+	        // should remove margin that we added for the picture and wrapper
+	        $(this).find("h1").removeClass("with-margin");
+
+	        $(this).find('.image-wrapper')
+                .removeClass('flexslider')
+                .removeClass('done')
+                .html('')
+                .flexslider('destroy');
+	    }
 	});
 	
 	/*============================================
