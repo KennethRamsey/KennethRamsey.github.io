@@ -112,7 +112,7 @@ $(document).ready(function() {
 	});
 
 	/*============================================
-	Project Preview
+	Project Preview - THE MODAL
 	==============================================*/ 
 
     // create click handlers for modal buttons
@@ -137,6 +137,9 @@ $(document).ready(function() {
 			$(this).find('h1').text(title);
 			$(this).find('.btn').attr('href',link);
 			$(this).find('.project-descr').html(descr);
+
+		    // hide link if no link yet.
+			if (link == '#somelink') $(this).find('.btn').css('display', 'none');
             
 		    // Needs to only hadd the flex box if there is a .image-wrapper div.
 			var imageWrapper = $(this).find('.image-wrapper');
