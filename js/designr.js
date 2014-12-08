@@ -139,7 +139,12 @@ $(document).ready(function() {
 			$(this).find('.project-descr').html(descr);
 
 		    // hide link if no link yet.
-			if (link == '#somelink') $(this).find('.btn').css('display', 'none');
+			if (link == '#somelink') {
+			    $(this).find('.btn').css('display', 'none')
+			}
+			else {
+			    $(this).find('.btn').css('display', 'inline-block')
+			}
             
 		    // Needs to only hadd the flex box if there is a .image-wrapper div.
 			var imageWrapper = $(this).find('.image-wrapper');
