@@ -1,0 +1,24 @@
+HOW Does UI-ROUTING WORK?
+----------------------------
+
+http://angular-ui.github.io/ui-router/site/#/api/ui.router.state.$state
+$state: 
+• service is responsible for representing states as well as transitioning between them. 
+• It also provides interfaces to ask for current state or even states you're coming from.
+
+Uses:
+$state.go('contact.detail') - will go to the contact.detail state
+$state.go('^') - will go to a parent state
+$state.go('^.sibling') - will go to a sibling state
+$state.go('.child.grandchild') - will go to grandchild state
+
+
+CONTROLLER Example
+var app = angular.module('app', ['ui.router']);
+ 
+app.controller('ctrl', function ($scope, $state) {
+  $scope.changeState = function () {
+    $state.go('contact.detail');
+  };
+});
+
