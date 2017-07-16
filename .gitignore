@@ -9,3 +9,6 @@
 !.vscode/extensions.json
 
 # End of https://www.gitignore.io/api/visualstudiocode
+/.vs/config/applicationhost.config
+/.vs/KennethRamsey.github.io/v15/.suo
+/.vs/slnx.sqlite
