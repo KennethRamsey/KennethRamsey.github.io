@@ -311,3 +311,11 @@ $(document).ready(function() {
 	}
 
 });	
+
+
+function showVisitSiteLink(shouldShow) {
+    document.getElementById('VisitSiteBtn').style.display =
+        shouldShow
+        ? "block"
+        : "none";
+}

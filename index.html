@@ -67,7 +67,7 @@
                         <a href="#home" class="scrollto">Home</a>
                     </li>
                     <li>
-                        <a href="#services" class="scrollto">What I do</a>
+                        <a href="assets/kenneth ramsey - resume.pdf">Resume</a>
                     </li>
                     <li>
                         <a href="#about" class="scrollto">About Me</a>
@@ -205,7 +205,7 @@
                         Whenever I see an interesting course on <a href="https://app.pluralsight.com/library/">Pluralsight</a>
                         or <a href="https://www.coursera.org/">Coursera</a>, I try to take it.
 
-                        Outside of technology, I enjoy juggling and outdoors activities.
+                        Outside of technology, I enjoy juggling and outdoor activities.
 
                         Besides all of this, the primary focus of my life is to follow Jesus -
                         come visit my <a href="http://orlandochurchofchrist.com">church</a>!
@@ -228,19 +228,20 @@
 
             <!--==== Portfolio Filters ====-->
             <div id="filter-works">
-                <ul>
-                    <!-- 						<li class="active">
-                                                <a href="#fake" data-filter="*">All</a>
-                                            </li> -->
+                <ul> 
                     <li>
-                        <a href="#fake" data-filter=".resume">My Resume</a>
+                        <a data-filter=".portfolio">Portfolio</a>
                     </li>
                     <li>
-                        <a href="#fake" data-filter=".work-history">Work History</a>
+                        <a data-filter=".work-history">Work History</a>
                     </li>
                     <li>
-                        <a href="#fake" data-filter=".portfolio">Portfolio</a>
+                        <a data-filter=".resume">My Resume</a>
                     </li>
+                    <li class="active">
+                        <a href="#fake" data-filter="*">All</a>
+                    </li>
+                    
                 </ul>
             </div><!--End portfolio filters -->
 
@@ -255,12 +256,12 @@
 
             <div id="projects-container">
 
-                <a class="project-item portfolio" href="https://RamseyK-Budgeteer.azurewebsites.net" data-images="assets/projects/project-slide.jpg, assets/projects/project-slide.jpg">
+                <a class="project-item portfolio" href="https://KramseyBudgeteer.azurewebsites.net" data-images="assets/projects/project-slide.jpg, assets/projects/project-slide.jpg" onclick="showVisitSiteLink(true);">
 
                     <img class="img-responsive project-image" src="assets/project.bmp" alt=""><!--Project thumb -->
 
                     <div class="hover-mask">
-                        <h2 class="project-title">Project: Budgeteer - (coming soon)</h2><!--Project Title -->
+                        <h2 class="project-title">Project: Budgeteer</h2><!--Project Title -->
                         <p> Budgeting software</p><!--Project Subtitle -->
                     </div>
 
@@ -290,7 +291,7 @@
                 </a><!--End Project Item -->
 
 
-                <a class="project-item portfolio" href="https://kramseybugtracker.azurewebsites.net" data-images="assets/projects/project-slide.jpg, assets/projects/project-slide.jpg">
+                <a class="project-item portfolio" href="https://kramseybugtracker.azurewebsites.net" data-images="assets/projects/project-slide.jpg, assets/projects/project-slide.jpg" onclick="showVisitSiteLink(true);">
 
                     <img class="img-responsive project-image" src="assets/projects/project-thumb-red1.jpg" alt=""><!--Project thumb -->
 
@@ -323,7 +324,7 @@
                 </a><!--End Project Item -->
 
 
-                <a class="project-item portfolio" href="https://KramseyCarViewer.azurewebsites.net" data-images="assets/projects/project-slide.jpg, assets/projects/project-slide.jpg">
+                <a class="project-item portfolio" href="https://KramseyCarViewer.azurewebsites.net" data-images="assets/projects/project-slide.jpg, assets/projects/project-slide.jpg" onclick="showVisitSiteLink(true);">
 
                     <img class="img-responsive project-image" src="assets/project.bmp" alt=""><!--Project thumb -->
 
@@ -355,9 +356,40 @@
                 </a><!--End Project Item -->
 
 
-                <a class="project-item work-history" href="#somelink" data-images="assets/projects/project-slide.jpg, assets/projects/project-slide.jpg">
+                <div class="project-item work-history" data-images="assets/projects/project-slide.jpg, assets/projects/project-slide.jpg" onclick="showVisitSiteLink(false);">
 
                     <img class="img-responsive project-image" src="assets/projects/project-thumb-red1.jpg" alt=""><!--Project thumb -->
+
+
+                    <div class="hover-mask">
+                        <h2 class="project-title">Previous Employer: <br />Core Techs</h2><!--Project Title -->
+                        <p>Software Engineer</p><!--Project Subtitle -->
+                    </div>
+
+                    <!--==== Project Preview HTML ====-->
+
+                    <div class="sr-only project-description">
+                        <hr />
+                        <p class="clearfix"></p>
+                        <p>General Duties:</p>
+                        <ul>
+                            <li>Improved and maintained <a href="https://portal.AdvancedFraudSolutions.com">TrueChecks</a> 5.0, a MVC 5 website and API. Deploying updates to the website using Octopus.</li>
+                            <li>Wrote custom data loaders for new clients of <a href="https://www.advancedfraudsolutions.com/truecards/">TrueCards</a>, a wpf application that uses MS SQL server database.</li>
+                            <li>Performed TrueCards installs and upgrades for clients (created database with proper permissions, installed and test loader service).</li>
+                            <li>Performed remote support debugging for TrueChecks and TrueCards clients.</li>
+                            <li>Created SQL queries/stored procedures for a SQL database.</li>
+                            <li>Assisted in maintaining and migrating TrueChecks 4.0, a legacy WCF service</li>
+                        </ul>
+                        <!--<img class="img-responsive img-center" src="assets/projects/company-logo.png" alt="">-->
+                        <!--<p>Lorem ipsum dolor</p>-->
+                    </div>
+
+                </div><!--End Project Item -->
+
+
+                <div class="project-item work-history" data-images="assets/projects/project-slide.jpg, assets/projects/project-slide.jpg" onclick="showVisitSiteLink(false);">
+
+                    <img class="img-responsive project-image" src="assets/Paperclip.bmp" alt=""><!--Project thumb -->
 
                     <div class="hover-mask">
                         <h2 class="project-title">Previous Employer: <br />J.P. Ramsey C.P.A.</h2><!--Project Title -->
@@ -379,36 +411,10 @@
                         <!--<p>Lorem ipsum dolor</p>-->
                     </div>
 
-                </a><!--End Project Item -->
+                </div><!--End Project Item -->
 
 
-                <a class="project-item work-history" href="#somelink" data-images="assets/projects/project-slide.jpg, assets/projects/project-slide.jpg">
-
-                    <img class="img-responsive project-image" src="assets/Paperclip.bmp" alt=""><!--Project thumb -->
-
-                    <div class="hover-mask">
-                        <h2 class="project-title">Previous Employer: <br />Huntington Learning Center</h2><!--Project Title -->
-                        <p>Mathematics Tutor</p><!--Project Subtitle -->
-                    </div>
-
-                    <!--==== Project Preview HTML ====-->
-
-                    <div class="sr-only project-description">
-                        <hr />
-                        <p class="clearfix"></p>
-                        <p>General Duties:</p>
-                        <ul>
-                            <li>Tutored students from middle school through high school in mathematics, SAT, and ACT preparation.</li>
-                            <li>Free-lanced tutored college students in physics and upper mathematics in this time.</li>
-                        </ul>
-                        <!--<img class="img-responsive img-center" src="assets/projects/company-logo.png" alt="">-->
-                        <!--<p>Lorem ipsum dolor</p>-->
-                    </div>
-
-                </a><!--End Project Item -->
-
-
-                <a class="project-item work-history" href="#somelink" data-images="assets/projects/project-slide.jpg, assets/projects/project-slide.jpg">
+                <div class="project-item work-history" data-images="assets/projects/project-slide.jpg, assets/projects/project-slide.jpg" onclick="showVisitSiteLink(false);">
 
                     <img class="img-responsive project-image" src="assets/projects/project-thumb-red1.jpg" alt=""><!--Project thumb -->
 
@@ -424,6 +430,7 @@
                         <p class="clearfix"></p>
                         <p>General Duties:</p>
                         <ul>
+                            <li><a href="http://physics.utsa.edu/PREM/Nanophotonics.html">http://physics.utsa.edu/PREM/Nanophotonics.html</a></li>
                             <li>Assisted Graduates on physics research</li>
                             <li>Operated several class IV lasers along with a Transmission Electron Microscope</li>
                             <li>Gathered and analyzed spectral data on many samples</li>
@@ -433,10 +440,10 @@
                         <!--<p>Lorem ipsum dolor</p>-->
                     </div>
 
-                </a><!--End Project Item -->
+                </div><!--End Project Item -->
 
 
-                <a class="project-item resume" href="#somelink" data-images="assets/projects/project-slide.jpg, assets/projects/project-slide.jpg">
+                <div class="project-item resume" data-images="assets/projects/project-slide.jpg, assets/projects/project-slide.jpg" onclick="showVisitSiteLink(false);">
 
                     <img class="img-responsive project-image" src="assets/pencil.bmp" alt=""><!-- Project thumb -->
 
@@ -460,25 +467,25 @@
 
                             <div class="col-sm-3">
                                 <ul>
-                                    <li>MVC
+                                    <li>ASP.NET MVC
+                                    <li>SQL
                                     <li>JavaScript
                                     <li>TypeScript
                                     <li>JQueryJS
                                     <li>AngularJS
                                     <li>HTML5
-                                    <li>CSS3
                                     <li>Regex
-                                    <li>SQL
+                                    <li>CSS3
                                 </ul>
                             </div>
 
                             <div class="col-sm-4">
                                 <ul>
-                                    <li>Photoshop
-                                    <li>R
                                     <li>Python
+                                    <li>R
                                     <li>Mathematica
                                     <li>AutoHotKey
+                                    <li>Photoshop
                                     <li>Excel
                                 </ul>
                             </div>
@@ -487,12 +494,12 @@
                         </div>
                     </div>
 
-                </a>
+                </div>
                 <!-- ==============================================
                 END PROJECT ITEM
                 =============================================== -->
 
-                <a class="project-item resume" href="#somelink" data-images="assets/projects/project-slide.jpg, assets/projects/project-slide.jpg">
+                <div class="project-item resume" data-images="assets/projects/project-slide.jpg, assets/projects/project-slide.jpg" onclick="showVisitSiteLink(false);">
 
                     <img class="img-responsive project-image" src="assets/projects/project-thumb-red1.jpg" alt="" /><!--Project thumb -->
 
@@ -507,6 +514,14 @@
                     <div class="sr-only project-description">
                         <hr />
                         <p class="clearfix">
+                            Coder Foundry
+                            <br />Masters Class in ASP.NET MVC and AngularJS.
+                            <ul>
+                                <li>Mastery of Web.</li>
+                            </ul>
+                        </p>
+                        <hr />
+                        <p class="clearfix">
                             The University of Texas at San Antonio,
                             <br />Bachelors of Science in Physics with a Minor in Mathematics
                             <ul>
@@ -516,20 +531,12 @@
                             </ul>
                         </p>
                         <hr />
-                        <p class="clearfix">
-                            Coder Foundry,
-                            <br />Masters Class in MVC and AngularJS.
-                            <ul>
-                                <li>Mastery of Web.</li>
-                            </ul>
-                        </p>
-                        <hr />
                     </div>
 
-                </a><!--End Project Item -->
+                </div><!--End Project Item -->
 
 
-                <a class="project-item resume" href="#somelink" data-images="assets/projects/project-slide.jpg, assets/projects/project-slide.jpg">
+                <div class="project-item resume" data-images="assets/projects/project-slide.jpg, assets/projects/project-slide.jpg" onclick="showVisitSiteLink(false);">
 
                     <img class="img-responsive project-image" src="assets/bookmark.bmp" alt=""><!--Project thumb -->
 
@@ -556,7 +563,7 @@
                         <!--<p>Lorem ipsum dolor</p>-->
                     </div>
 
-                </a><!--End Project Item -->
+                </div><!--End Project Item -->
 
 
             </div><!-- End projects -->
@@ -590,7 +597,7 @@
 
                         <div class="clearfix"></div>
 
-                        <p class="text-center"><a class="btn btn-theme"><i class="icon-external-link"></i>Visit Website</a></p>
+                        <p id="VisitSiteBtn" class="text-center"><a class="btn btn-theme"><i class="icon-external-link"></i>Visit Website</a></p>
 
                     </div><!-- End modal-body -->
 
@@ -601,20 +608,7 @@
         </div><!-- End modal -->
 
     </section><!-- End portfolio section -->
-    <!-- ==============================================
-    TWITTER FEED
-    =============================================== -->
-    <section id="twitter">
-        <div class="container">
-            <div class="row scrollimation fade-in">
-                <div class="col-sm-1 twitter-icon">
-                </div>
-                <div class="col-sm-11">
-                </div>
-            </div><!-- End row -->
-        </div><!-- End container -->
-
-    </section><!-- End Twitter section -->
+    
     <!-- ==============================================
     CONTACT
     =============================================== -->
