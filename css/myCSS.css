@@ -1,0 +1,18 @@
+
+
+.business-item-container {
+    padding-bottom: 4em;
+}
+
+.business-item-container * {
+    transition: 0.5s;
+}
+
+.fadein {
+    max-height: 100em;
+}
+
+.fadeout {
+    max-height: 0;
+    opacity: 0;
+}
