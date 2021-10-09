@@ -16,3 +16,12 @@
     max-height: 0;
     opacity: 0;
 }
+
+
+.links-darker a {
+    /* color: #8f4242; */
+    color: #d56464;
+}
+.links-darker a:hover {
+    text-decoration: underline;
+}
